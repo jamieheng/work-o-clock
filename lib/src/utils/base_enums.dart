@@ -1,0 +1,1 @@
+enum CreateForm { task, meeting }
