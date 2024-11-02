@@ -1,3 +1,8 @@
 {
-	"cSpell.words": ["Getx", "Jost", "WORKO'CLOCK"]
+  "cSpell.words": [
+    "Getx",
+    "Jost",
+    "WORKO'CLOCK"
+  ],
+  "dart.flutterSdkPath": ".fvm/versions/3.24.3"
 }

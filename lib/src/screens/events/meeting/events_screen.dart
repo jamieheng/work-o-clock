@@ -76,7 +76,7 @@ class EventsScreen extends StatelessWidget {
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
-                primary: Colors.blueAccent,
+                foregroundColor: Colors.blueAccent,
               ),
               child: const Text(
                 'Cancel',

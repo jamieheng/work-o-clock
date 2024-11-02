@@ -128,10 +128,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               },
                               style: ElevatedButton.styleFrom(
                                 shape: const CircleBorder(),
-                                padding: const EdgeInsets.all(24),
-                                primary: controller.isClockedIn.value
+                                backgroundColor: controller.isClockedIn.value
                                     ? BaseColors.secondaryColor
                                     : BaseColors.primaryColor,
+                                padding: const EdgeInsets.all(24),
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
