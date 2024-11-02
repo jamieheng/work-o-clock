@@ -6,8 +6,11 @@ class BaseButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color backgroundColor;
   final Color textColor;
-  final double borderRadius;
+  final double? borderRadius;
   final EdgeInsetsGeometry padding;
+  final double? width;
+  final double height;
+  final Icon? icon;
 
   const BaseButton({
     Key? key,
@@ -15,26 +18,45 @@ class BaseButton extends StatelessWidget {
     required this.onPressed,
     this.backgroundColor = BaseColors.primaryColor,
     this.textColor = Colors.white,
-    this.borderRadius = 8.0,
+    this.borderRadius = 15,
     this.padding = const EdgeInsets.symmetric(vertical: 15, horizontal: 16.0),
+    this.width,
+    this.height = 50,
+    this.icon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        padding: padding,
-        minimumSize: const Size(double.infinity, 50),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+    return SizedBox(
+      width: width,
+      height: height,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          padding: padding,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius!),
+          ),
+          backgroundColor: backgroundColor,
         ),
-        backgroundColor: backgroundColor,
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-            color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                color: textColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            if (icon != null) ...[
+              const SizedBox(width: 10),
+              icon!,
+              const SizedBox(width: 10),
+            ],
+          ],
+        ),
       ),
     );
   }

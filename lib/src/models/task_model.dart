@@ -3,6 +3,8 @@ class Task {
   final String date;
   final String time;
   final String assignedTo;
+  final String description;
+  final String createdAt;
   String status;
 
   Task({
@@ -10,6 +12,8 @@ class Task {
     required this.date,
     required this.time,
     required this.assignedTo,
+    required this.description,
+    required this.createdAt,
     this.status = 'Pending',
   });
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:work_o_clock/src/screens/chat_screen/chat_list.dart';
-import 'package:work_o_clock/src/screens/events_screen/events_screen.dart';
-import 'package:work_o_clock/src/screens/home_screen/home_screen.dart';
+import 'package:work_o_clock/src/screens/chat/chat_list.dart';
+import 'package:work_o_clock/src/screens/events/meeting/events_screen.dart';
+import 'package:work_o_clock/src/screens/home/home_screen.dart';
 import 'package:work_o_clock/src/screens/payment/payroll_screen.dart';
-import 'package:work_o_clock/src/screens/profile_screen/profile_screen.dart';
+import 'package:work_o_clock/src/screens/profile/profile_screen.dart';
 import 'package:work_o_clock/src/utils/base_colors.dart';
 
 class BottomNavigation extends StatefulWidget {

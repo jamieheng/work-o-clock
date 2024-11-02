@@ -17,7 +17,7 @@ class CreateTaskController extends GetxController {
   void submitForm(BuildContext context) {
     if (formKey.currentState!.validate()) {
       String title = titleController.text;
-      String description = descriptionController.text;
+      // String description = descriptionController.text;
 
       // Logic to save or create the task can be added here
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
